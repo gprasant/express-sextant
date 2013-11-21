@@ -1,0 +1,30 @@
+{
+  "name": "express-sextant",
+  "version": "0.0.0",
+  "description": "Find out what routes your express app supports",
+  "main": "lib/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gprasant/express-sextant.git"
+  },
+  "keywords": [
+    "express",
+    "routes"
+  ],
+  "author": "Prasanth Guruprasad",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "b3a28357dbdd8b62c023ee7a30378c43fa7387d7",
+  "bugs": {
+    "url": "https://github.com/gprasant/express-sextant/issues"
+  },
+  "dependencies": {
+    "express": "~3.4.4"
+  },
+  "devDependencies": {
+    "coffee-script-redux": "~2.0.0-beta7"
+  }
+}
