@@ -27,6 +27,7 @@
   "devDependencies": {
     "coffee-script-redux": "~2.0.0-beta7",
     "request": "~2.27.0",
-    "mocha": "~1.14.0"
+    "mocha": "~1.14.0",
+    "bondjs": "~1.0.0"
   }
 }
