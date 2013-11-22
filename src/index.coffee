@@ -1,9 +1,6 @@
-express = require "express"
 
-app = express.application ? express.application : express.HTTPServer.prototype
-
-sextant = () ->
+sextant = (app) ->
   app.get '/routes', (req, res) ->
-    res.send "It Works"
+    res.send 200, app.routes
 
 module.exports = sextant
