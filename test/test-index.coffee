@@ -14,9 +14,12 @@ describe "sextant", ->
   describe "GET /routes", ->
     [err, response, body] = [null, null, null]
     callRoutes = null
+    opts =
+      url: "http://localhost:3000/routes"
+      json: true
     before (done)->
       callRoutes = (done_here) ->
-        request "http://localhost:3000/routes", (_err, _res, _body) ->
+        request opts, (_err, _res, _body) ->
           err = _err
           response = _res
           body = _body
@@ -37,7 +40,8 @@ describe "sextant", ->
 
 
       it "should get app.routes in response", ->
-        deepEqual test_routes, JSON.parse body
+        deepEqual test_routes, body
+
 
 
 
