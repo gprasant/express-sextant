@@ -24,7 +24,8 @@
   "dependencies": {
     "express": "~3.4.4",
     "hogan.js": "~2.0.0",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "ejs": "~0.8.5"
   },
   "devDependencies": {
     "coffee-script-redux": "~2.0.0-beta7",

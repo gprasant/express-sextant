@@ -1,10 +1,12 @@
 {first, map, pluck} = require 'underscore'
 
 sextant = (app) ->
+  app.engine 'html', require('ejs').renderFile
+
   app.get '/routes', (req, res) ->
     res.format
-      text: ->
-        res.send 200, "routes text"
+      html: ->
+        res.render "#{__dirname}/../views/routes.html"
       json: ->
         res.send 200, app.routes
 

@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Routes | {{app.name}}</title>
+</head>
+<body>
+  <table id="routes">
+    <thead>
+      <tr>
+        <td> Method </td>
+        <td> Path </td>
+        <td> Params </td>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+  <script id="t_route" type="text/template">
+    {{#routes}}
+      <tr data-route-id="{{path}}">
+          <td>{{method}}</td>
+          <td>{{path}}</td>
+          <td>{{params}}</td>
+      </tr>
+    {{/routes}}
+  </script>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+  <script>
+    $(function() {
+      $.getJSON('/routes.json', function(data){
+        var template = $("#t_route").html();
+        var view     = Mustache.to_html(template, data);
+        console.log(template);
+        $("#routes tbody").html(view);
+      });
+    });
+  </script>
+</body>
+</html>
