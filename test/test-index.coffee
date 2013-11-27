@@ -15,16 +15,16 @@ describe "sextant", ->
     [err, response, body] = [null, null, null]
     callRoutes = null
     opts =
-      url: "http://localhost:3000/routes"
       json: true
     before (done)->
-      callRoutes = (done_here) ->
+      callRoutes = (path = "routes", done_here) ->
+        opts.url = "http://localhost:3000/#{path}"
         request opts, (_err, _res, _body) ->
           err = _err
           response = _res
           body = _body
           done_here()
-      callRoutes(done)
+      callRoutes("routes", done)
 
     it "should be available", ->
       expect !err
@@ -36,11 +36,11 @@ describe "sextant", ->
         test_routes = {"some": "routes"}
         bond(app, 'routes').to test_routes
         sextant = (require "..")(app)
-        callRoutes(done)
+        callRoutes("routes.json", done)
 
 
       it "should get app.routes in response", ->
-        deepEqual test_routes, body
+        deepEqual test_routes, body.app_routes
 
 
 

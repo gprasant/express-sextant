@@ -4,9 +4,7 @@ sextant = (app) ->
   app.engine 'html', require('ejs').renderFile
 
   app.get '/routes', (req, res) ->
-    res.format
-      html: ->
-        res.render "#{__dirname}/../views/routes.html"
+    res.render "#{__dirname}/../views/routes.html"
 
   app.get '/routes.json', (req, res) ->
     routes = first map app.routes, (val, key) -> val
