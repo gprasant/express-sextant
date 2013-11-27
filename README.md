@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/gprasant/express-sextant.png?branch=master)](https://travis-ci.org/gprasant/express-sextant)
+
 express-sextant
 ===============
 
