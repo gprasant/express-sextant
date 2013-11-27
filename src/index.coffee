@@ -7,8 +7,6 @@ sextant = (app) ->
     res.format
       html: ->
         res.render "#{__dirname}/../views/routes.html"
-      json: ->
-        res.send 200, app.routes
 
   app.get '/routes.json', (req, res) ->
     routes = first map app.routes, (val, key) -> val
@@ -19,7 +17,7 @@ sextant = (app) ->
 
     res.json
       "routes": routes_model
-      "routes_orig": app.routes
+      "app_routes": app.routes
 
 
 module.exports = sextant
