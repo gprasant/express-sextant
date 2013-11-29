@@ -30,6 +30,9 @@ describe "sextant", ->
       expect !err
       equal 200, response.statusCode
 
+    it "should render the routes table", ->
+      expect body.match /table id=\"routes\"/
+
     describe "returning app.routes", ->
       test_routes = null
       before (done)->
