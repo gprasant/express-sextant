@@ -12,17 +12,17 @@ Rails sextant like library for express.js to check out route matching in express
 ## Installation
 
 ``` shell
-$ npm install {package_name} --save
+$ npm install express-sextant --save
 ```
 
 ## Usage
 
-In your express app, after you have created the express application, require {package_name}, passing in the app object. Thats it !
+In your express app, after you have created the express application, require express-sextant, passing in the app object. Thats it !
 
     var express = require("express");
     var app = express();
 
-    require("{package_name}")(app);
+    require("express-sextant")(app);
 
 
 Now, after your app has booted up, navigate to localhost:3000/routes to see the routes that your app supports.
