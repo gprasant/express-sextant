@@ -26,3 +26,4 @@ In your express app, after you have created the express application, require exp
 
 
 Now, after your app has booted up, navigate to localhost:3000/routes to see the routes that your app supports.
+![routes](http://i.imgur.com/HBCMbsg.png)
