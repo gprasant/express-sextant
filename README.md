@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/gprasant/express-sextant.png?branch=master)](https://travis-ci.org/gprasant/express-sextant)
+[![Dependencies](http://david-dm.org/gprasant/express-sextant.png)](https://david-dm.org/gprasant/express-sextant)
 
 **Sextant** *n.*
 
