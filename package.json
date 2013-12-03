@@ -1,6 +1,6 @@
 {
   "name": "express-sextant",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Find out what routes your express app supports",
   "main": "lib/index",
   "scripts": {
