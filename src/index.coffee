@@ -1,4 +1,4 @@
-{first, map, pluck} = require 'underscore'
+{flatten, map, pluck} = require 'underscore'
 
 sextant = (app) ->
   app.engine 'html', require('ejs').renderFile
@@ -7,7 +7,7 @@ sextant = (app) ->
     res.render "#{__dirname}/../views/routes.html"
 
   app.get '/routes.json', (req, res) ->
-    routes = first map app.routes, (val, key) -> val
+    routes = flatten map app.routes, (val, key) -> val
     routes_model = map routes, (x) ->
       "method": x.method
       "path":   x.path
