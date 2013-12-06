@@ -11,7 +11,6 @@ sextant = (app) ->
     routes_model = map routes, (x) ->
       "method": x.method
       "path":   x.path
-      "path_l": x.path.toLowerCase()
       "params": x.params
 
     res.json

@@ -20,7 +20,7 @@
   </table>
   <script id="t_route" type="text/template">
     {{#routes}}
-      <tr data-index="{{method}}{{path_l}}" class="searchable">
+      <tr data-index="{{method}}{{#lower}}{{path}}{{/lower}}" class="searchable">
           <td>{{method}}</td>
           <td>{{path}}</td>
           <td>{{params}}</td>
@@ -33,6 +33,11 @@
     $(function() {
       $.getJSON('/routes.json', function(data){
         var template = $("#t_route").html();
+        data.lower = function(){
+          return function(text, render){
+            return render(text.toLowerCase());
+          };
+        };
         var view     = Mustache.to_html(template, data);
         $("#routes tbody").html(view);
       });
