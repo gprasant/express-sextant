@@ -66,7 +66,6 @@ describe "sextant", ->
 describe "Non Development envionment", ->
 
   [server, app] = [null, null]
-
   before (done)->
     m_settings =
       env: "production"
