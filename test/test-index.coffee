@@ -75,13 +75,14 @@ describe "Non Development envionment", ->
     server = app.listen 3000
     done()
 
-  it "should not be available", ->
+  it "should not be available", (done)->
     equal 'production', app.settings.env
     request "http://localhost:3000/routes", (_err, _res, _body) ->
       err = _err
       response = _res
       body = _body
       equal 404, response.statusCode
+      done()
 
   after ->
     server.close()
